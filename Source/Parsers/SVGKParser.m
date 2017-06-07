@@ -151,6 +151,7 @@ SVGKParser* getCurrentlyParsingParser()
 	{
 		self.parserKnownNamespaces = [NSMutableDictionary dictionary];
 	}
+    if(extension != nil ) {
 	for( NSString* parserNamespace in extension.supportedNamespaces )
 	{
 		NSMutableArray* extensionsForNamespace = [self.parserKnownNamespaces objectForKey:parserNamespace];
@@ -162,6 +163,7 @@ SVGKParser* getCurrentlyParsingParser()
 		
 		[extensionsForNamespace addObject:extension];
 	}
+    }
 }
 
 //static FILE *desc;
